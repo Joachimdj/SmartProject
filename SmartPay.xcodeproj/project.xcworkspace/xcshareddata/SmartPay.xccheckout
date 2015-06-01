@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7BB78BBB-B51D-42C4-BA6B-DAC3DA2F6000</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SmartPay</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1D564F22AE96E434DD064661048BC2B54CA3BAB2</key>
+		<string>https://github.com/Joachimdj/SmartPay.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SmartPay.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1D564F22AE96E434DD064661048BC2B54CA3BAB2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Joachimdj/SmartPay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1D564F22AE96E434DD064661048BC2B54CA3BAB2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1D564F22AE96E434DD064661048BC2B54CA3BAB2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SmartPay</string>
+		</dict>
+	</array>
+</dict>
+</plist>
