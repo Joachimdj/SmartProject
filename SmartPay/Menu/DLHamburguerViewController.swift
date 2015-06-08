@@ -23,7 +23,7 @@ enum DLHamburguerMenuBackgroundStyle: Int {
 }
 
 // Constants
-private let kDLHamburguerMenuSpan: CGFloat = 50.0
+private let kDLHamburguerMenuSpan: CGFloat = 100.0
 
 /**
  * The DLHamburguerViewController is the main VC managing the content view controller and the menu view controller.
@@ -228,20 +228,7 @@ class DLHamburguerViewController: UIViewController {
     // MARK: - Rotation legacy support (iOS 7)
     
     override func shouldAutorotate() -> Bool { return self.contentViewController.shouldAutorotate() }
-    
-    override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-        // call super and inform delegate
-        super.willAnimateRotationToInterfaceOrientation(toInterfaceOrientation, duration: duration)
-        self.delegate?.hamburguerViewController?(self, willAnimateRotationToInterfaceOrientation: toInterfaceOrientation, duration: duration)
-        // adjust size of menu if visible only.
-        self.containerViewController.setContainerFrame(self.menuViewController.view.frame)
-    }
-    
-    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
-        if !self.menuVisible { self.actualMenuViewSize = CGSizeZero }
-        adjustMenuSize(forRotation: true)
-    }
+     
     
     // MARK: - Rotation (iOS 8)
     

@@ -7,25 +7,29 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7BB78BBB-B51D-42C4-BA6B-DAC3DA2F6000</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SmartPay</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1D564F22AE96E434DD064661048BC2B54CA3BAB2</key>
 		<string>https://github.com/Joachimdj/SmartPay.git</string>
+		<key>637D9DF46E1F4773147095C65A114012847E89B9</key>
+		<string>https://github.com/Joachimdj/SmartProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SmartPay.xcodeproj</string>
+	<string>SmartPay.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1D564F22AE96E434DD064661048BC2B54CA3BAB2</key>
+		<string>../../../SmartPay</string>
+		<key>637D9DF46E1F4773147095C65A114012847E89B9</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Joachimdj/SmartPay.git</string>
+	<string>https://github.com/Joachimdj/SmartProject.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1D564F22AE96E434DD064661048BC2B54CA3BAB2</string>
+	<string>637D9DF46E1F4773147095C65A114012847E89B9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>1D564F22AE96E434DD064661048BC2B54CA3BAB2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SmartPay</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>637D9DF46E1F4773147095C65A114012847E89B9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SmartProject</string>
 		</dict>
 	</array>
 </dict>

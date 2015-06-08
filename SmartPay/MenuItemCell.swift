@@ -8,16 +8,16 @@ import UIKit
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var amountLabel: UILabel!
+    @IBOutlet weak var add: UIButton!
+    @IBOutlet weak var minus: UIButton!
+    @IBOutlet weak var amount: UILabel!
+ 
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+ 
     
  }

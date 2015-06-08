@@ -8,14 +8,17 @@
 
 import UIKit
 
-class DLDemoRootViewController: DLHamburguerViewController {
+class AppMenu: DLHamburguerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(false)
+        
+    }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
     }
@@ -26,6 +29,7 @@ class DLDemoRootViewController: DLHamburguerViewController {
     }
     
     override func awakeFromNib() {
+   
         self.contentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DLDemoNavigationViewController") as! UIViewController
         self.menuViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DLDemoMenuViewController") as! UIViewController
     }

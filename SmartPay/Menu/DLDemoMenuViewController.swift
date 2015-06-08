@@ -15,15 +15,34 @@ class DLDemoMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     // data
-    let segues = ["Menu kort", "Profile", "Kvitteringer","Betalingskort","Log ud"]
+    let segues = ["Profile", "Kvitteringer","Betalingskort","Log ud"]
+    let seguesName = [ "Profile", "Recipts","PaymentCard","Login"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
       self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
-        var myView = UIView() 
+        var myView = UIView()
+      var facebookIDNow = ""
+         let profileDataContainer = defaults.stringForKey("profileDataContainer")
+        if (profileDataContainer != nil) {
+        var profile = profileDataContainer!.componentsSeparatedByString("|");
+        facebookIDNow = profile[4];
+        println(FBSession.activeSession().isOpen)
+        } 
+ 
+        let url = NSURL(string: "https://graph.facebook.com/\(facebookIDNow)/picture?type=large")
+        let urlRequest = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+            
+            // Display the image
+            let image = UIImage(data: data)
+            self.profileImage.image = image
+            }
+ 
     }
-
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,14 +61,12 @@ class DLDemoMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let nvc = self.mainNavigationController()
-        if let hamburguerViewController = self.findHamburguerViewController() {
-            hamburguerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
-                nvc.visibleViewController.performSegueWithIdentifier(self.segues[indexPath.row], sender: nil)
-                hamburguerViewController.contentViewController = nvc
-            })
-        }
+        if(self.seguesName[indexPath.row] == "MenuCard"){
+     self.dismissViewControllerAnimated(true, completion: nil)
+        } else{
+        let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier(self.seguesName[indexPath.row])
+        self.showViewController(vc as! UIViewController, sender: vc)
+    }
     }
     
     // MARK: - Navigation

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewOrder: UIViewController {
+class Order: UIViewController {
     var myscr : UIScrollView?
     var myView : UIView?
     var total : UILabel?
@@ -20,8 +20,8 @@ class NewOrder: UIViewController {
     var totalAmount : UILabel? 
     var imageView : UIImageView?
     var accountNumber: UITextField!
-    let screenSize: CGRect = UIScreen.mainScreen().bounds
-       var data2 = [SQLRow]()
+
+
     override func viewDidLoad() {
         formatter.numberStyle = .CurrencyStyle
         formatter.locale = NSLocale(localeIdentifier: "da_DK")
@@ -241,10 +241,17 @@ class NewOrder: UIViewController {
      
      // self.dismissViewControllerAnimated(true, completion: nil)
     }
-    @IBAction func Tom(sender: AnyObject) {
-        emtyBasket() 
+    @IBAction func em(sender: AnyObject) {
+        println("EM")
+         emtyBasket()
+  
         
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func Tom(sender: AnyObject) {
+       emtyBasket()
+        println("TOM")
+   
         
         
     }

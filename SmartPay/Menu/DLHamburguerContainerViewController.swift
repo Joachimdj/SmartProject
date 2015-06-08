@@ -269,6 +269,7 @@ class DLHamburguerContainerViewController: UIViewController {
                 }
             }
             self.setContainerFrame(frame)
+            
         }
         
         // end: decide whether to open or close the menu based on the position
@@ -308,11 +309,7 @@ class DLHamburguerContainerViewController: UIViewController {
         backgroundFadingView.alpha = hamburguerViewController.overlayAlpha
     }
     
-    // iOS7 Rotation legacy support.
-    override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-        super.willAnimateRotationToInterfaceOrientation(toInterfaceOrientation, duration: duration)
-        self.fixLayoutWithDuration(duration)
-    }
+   
     
     // iOS 8 Transition.
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

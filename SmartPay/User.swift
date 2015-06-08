@@ -9,11 +9,11 @@
 import UIKit
    
     struct User {
-        let id : Int64
-        let name : String
-        let email : NSDictionary
-        let facebookID : String
-        let code : String
-        let creationDate : NSDate 
+        let id : Int
+        let firstName : String
+        let lastName : String
+        let email : String
+        let mobile : String
+        let facebookID : Int
   
 }

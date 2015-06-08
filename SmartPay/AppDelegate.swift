@@ -18,12 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         loadCatData();
         loadMenuItemData();
-        
-
+        loadReciptsData();
+        FBLoginView.self
+        FBProfilePictureView.self
+       
         
         return true
     }
-
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool { //error message 1 here
+    var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication!) //error message 2 here
+    return wasHandled
+        }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

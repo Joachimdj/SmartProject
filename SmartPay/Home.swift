@@ -8,17 +8,22 @@
 
 import UIKit
 
-class Cats: UITableViewController {
-
+class Home: UITableViewController {
+   
     @IBOutlet weak var Basket: UIBarButtonItem!
     override func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
+        var profileData = "||||"
+        defaults.setObject(profileData, forKey: "profileDataContainer")
         formatter.numberStyle = .CurrencyStyle
         formatter.locale = NSLocale(localeIdentifier: "da_DK")
     
     }
+   
+    
     @IBAction func menuButtonTouched(sender: AnyObject) {
-        self.findHamburguerViewController()?.showMenuViewController()
+        self.findHamburguerViewController()?.showMenuViewController() 
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -26,7 +31,8 @@ class Cats: UITableViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(false)
-       Basket.title = "Kurv(\(formatter.stringFromNumber(basket)!))"
+        
+     
         var shadow = NSShadow()
         shadow.shadowColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         shadow.shadowOffset = CGSizeMake(0, 1)
@@ -40,10 +46,15 @@ class Cats: UITableViewController {
             NSFontAttributeName : titleFont,
             NSBackgroundColorAttributeName : color1
         ]
-
-           Basket.setTitleTextAttributes(attributes, forState: UIControlState.Normal)
+ 
+        if(FBSession.activeSession().isOpen == false && login == false){
+            
+            var vc = self.storyboard?.instantiateViewControllerWithIdentifier("Login") as! Profile
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
     }
-
+  
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -63,16 +74,22 @@ class Cats: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cats", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
+     
         cell.textLabel?.text = CatDic[indexPath.row].name
+        
         return cell
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        Selectedcat = CatDic[indexPath.row].id  
+        Selectedcat = CatDic[indexPath.row].id
+  
+        
+        // addSubView(indexPath.row,itemId: 1)
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+ 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
