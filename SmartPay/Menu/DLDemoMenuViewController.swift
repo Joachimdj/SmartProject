@@ -70,9 +70,6 @@ class DLDemoMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     // MARK: - Navigation
-    
-    func mainNavigationController() -> DLHamburguerNavigationController {
-        return self.storyboard?.instantiateViewControllerWithIdentifier("DLDemoNavigationViewController") as! DLHamburguerNavigationController
-    }
+     
     
 }

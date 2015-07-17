@@ -10,7 +10,7 @@ import UIKit
 
 class Home: UITableViewController {
    
-    @IBOutlet weak var Basket: UIBarButtonItem!
+    @IBOutlet weak var menu: UIBarButtonItem! 
     override func viewDidLoad() {
         super.viewDidLoad()
         var profileData = "||||"
@@ -21,10 +21,6 @@ class Home: UITableViewController {
     }
    
     
-    @IBAction func menuButtonTouched(sender: AnyObject) {
-        self.findHamburguerViewController()?.showMenuViewController() 
-        
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,8 +48,18 @@ class Home: UITableViewController {
             var vc = self.storyboard?.instantiateViewControllerWithIdentifier("Login") as! Profile
             self.presentViewController(vc, animated: true, completion: nil)
         }
+        
+        
+        if self.revealViewController() != nil {
+            menu.target = self.revealViewController()
+            menu.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            // Uncomment to change the width of menu
+            //self.revealViewController().rearViewRevealWidth = 62
+        }
     }
-  
+     
     
     // MARK: - Table view data source
 

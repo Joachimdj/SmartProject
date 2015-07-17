@@ -20,6 +20,7 @@ class Order: UIViewController {
     var totalAmount : UILabel? 
     var imageView : UIImageView?
     var accountNumber: UITextField!
+     var image: UIImage!
 
 
     override func viewDidLoad() {
@@ -235,12 +236,29 @@ class Order: UIViewController {
     func close(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    func goToPayment(sender: AnyObject) {
-        myscr?.removeFromSuperview()
-        createPaymentWindow()
+    func goToPayment(sender:UIButton!) {
+       // myscr?.removeFromSuperview()
+       // createPaymentWindow()
+        
+        var orderId = "123456789"
+        var name = "Kurv indhold"
+        var image = UIImage(named:"basket.png")
+        var recieptMessage = "Thanks for your payment"
+        MobilePayManager.sharedInstance().beginMobilePaymentWithOrderId(orderId, productName: name, productPrice: 13123123, productImage: nil, receiptMessage: recieptMessage) { (NSError error) -> Void in
+         
+           
+        }
+        
      
-     // self.dismissViewControllerAnimated(true, completion: nil)
+        // self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func alertView (UIAlertView) {
+    
+           UIApplication.sharedApplication().openURL(NSURL(string: MobilePayManager.sharedInstance().mobilePayAppStoreLinkDK)!)
+        
+    }
+    
     @IBAction func em(sender: AnyObject) {
         println("EM")
          emtyBasket()

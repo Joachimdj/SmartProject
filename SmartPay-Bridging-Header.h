@@ -6,3 +6,5 @@
 #import <time.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "SWRevealViewController.h"
+#import "MobilePayManager.h"
+#import "MobilePayCrossOver.h"

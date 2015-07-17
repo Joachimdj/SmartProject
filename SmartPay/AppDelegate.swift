@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData 
+import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loadReciptsData();
         FBLoginView.self
         FBProfilePictureView.self
-       
+        MobilePayManager.sharedInstance().setupWithMerchantId("APPDK0000000000", merchantUrlScheme: "fruitshop")
         
         return true
     }
@@ -117,5 +117,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?) -> Bool {
+     
+        MobilePayManager.sharedInstance().handleMobilePayCallbacksWithUrl(url, success: { (OrderId, transactionId, signature) -> Void in
+           println("Success")
+       //     ViewHelper.showAlertWithTitle("Mobilepay Success", message: "\(transactionId)")
+        }, error: { (orderId, errorCode, errorMessage) -> Void in
+             println("ERROR")
+         //     ViewHelper.showAlertWithTitle("Mobilepay Error", message: "")
+        }) { (orderId) -> Void in
+             println("Canceled")
+        }
+        return true
+    }
 }
 

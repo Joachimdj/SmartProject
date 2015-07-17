@@ -9,23 +9,61 @@
 import UIKit
 
 class MenuController: UITableViewController {
-
+  @IBOutlet weak var profileImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+        self.profileImage.clipsToBounds = true;
+        var myView = UIView()
+        var facebookIDNow = ""
+        let profileDataContainer = defaults.stringForKey("profileDataContainer")
+        if (profileDataContainer != nil) {
+            var profile = profileDataContainer!.componentsSeparatedByString("|");
+            facebookIDNow = profile[4];
+            println(FBSession.activeSession().isOpen)
+        }
+        
+        let url = NSURL(string: "https://graph.facebook.com/\(facebookIDNow)/picture?type=large")
+        let urlRequest = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+            
+            // Display the image
+            let image = UIImage(data: data)
+            self.profileImage.image = image
+        }    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) { 
+        var facebookIDNow = ""
+        let profileDataContainer = defaults.stringForKey("profileDataContainer")
+        if (profileDataContainer != nil) {
+            var profile = profileDataContainer!.componentsSeparatedByString("|");
+            facebookIDNow = profile[4];
+            println(FBSession.activeSession().isOpen)
+            
+            
+        }
+        
+        let url = NSURL(string: "https://graph.facebook.com/\(facebookIDNow)/picture?type=large")
+        let urlRequest = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+            
+            // Display the image
+            let image = UIImage(data: data)
+            self.profileImage.image = image
+        }
+        
+    }
 
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     // MARK: - Table view data source
 

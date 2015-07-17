@@ -10,16 +10,21 @@ import UIKit
 
 class Recipts: UITableViewController {
  
-    @IBAction func close(sender: AnyObject) {
-        
-            self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
        dataRecipts = db.query("SELECT * FROM Recipts WHERE user ='1'")
- 
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            // Uncomment to change the width of menu
+            //self.revealViewController().rearViewRevealWidth = 62
+        }
         
     }
 

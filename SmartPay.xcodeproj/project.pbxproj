@@ -12,12 +12,9 @@
 		881F2A1C1B2A37AE007EDBF0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 881F2A1B1B2A37AE007EDBF0 /* SWRevealViewController.m */; };
 		881F2A1E1B2A37EB007EDBF0 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F2A1D1B2A37EB007EDBF0 /* MenuController.swift */; };
 		881F2A201B2A37FC007EDBF0 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F2A1F1B2A37FC007EDBF0 /* NewsTableViewController.swift */; };
-		886E28DB1B1E6A720003DDDE /* PassbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E28D71B1E6A720003DDDE /* PassbookCell.swift */; };
-		886E28DC1B1E6A720003DDDE /* PassbookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886E28D81B1E6A720003DDDE /* PassbookCell.xib */; };
-		886E28DD1B1E6A720003DDDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E28D91B1E6A720003DDDE /* ViewController.swift */; };
-		886E28DE1B1E6A720003DDDE /* PassbookLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E28DA1B1E6A720003DDDE /* PassbookLayout.swift */; };
 		886E28E01B20CACC0003DDDE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E28DF1B20CACC0003DDDE /* Profile.swift */; };
 		886E29281B2133530003DDDE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886E29271B2133530003DDDE /* FacebookSDK.framework */; };
+		88CE637F1B36FAAF00F86531 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CE637E1B36FAAF00F86531 /* Product.m */; };
 		88DFF74B1B163EF700F502A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFF74A1B163EF700F502A9 /* AppDelegate.swift */; };
 		88DFF74E1B163EF700F502A9 /* SmartPay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88DFF74C1B163EF700F502A9 /* SmartPay.xcdatamodeld */; };
 		88DFF7531B163EF700F502A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DFF7511B163EF700F502A9 /* Main.storyboard */; };
@@ -43,11 +40,12 @@
 		88E5FCD41B1BD363004CE73F /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5FCD31B1BD363004CE73F /* MenuItemCell.swift */; };
 		88E5FCE21B1BE701004CE73F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5FCE11B1BE701004CE73F /* Order.swift */; };
 		88E5FCE41B1BEEDA004CE73F /* basket.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E5FCE31B1BEEDA004CE73F /* basket.png */; };
-		88E5FCEA1B1CC1A7004CE73F /* DLHamburguerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5FCE71B1CC1A7004CE73F /* DLHamburguerContainerViewController.swift */; };
-		88E5FCEB1B1CC1A7004CE73F /* DLHamburguerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5FCE81B1CC1A7004CE73F /* DLHamburguerNavigationController.swift */; };
-		88E5FCEC1B1CC1A7004CE73F /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5FCE91B1CC1A7004CE73F /* DLHamburguerViewController.swift */; };
 		88E5FCF11B1CC1E4004CE73F /* DLDemoMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5FCEE1B1CC1E4004CE73F /* DLDemoMenuViewController.swift */; };
-		88E5FCF21B1CC1E4004CE73F /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5FCEF1B1CC1E4004CE73F /* AppMenu.swift */; };
+		88F893D51B59938600838BF8 /* libMobilePayManager1.6.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F893D41B59936E00838BF8 /* libMobilePayManager1.6.0.a */; };
+		88F893D71B59939F00838BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F893D61B59939F00838BF8 /* CoreGraphics.framework */; };
+		88F893D91B5993A600838BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F893D81B5993A600838BF8 /* UIKit.framework */; };
+		88F893DB1B5993B200838BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F893DA1B5993B200838BF8 /* Foundation.framework */; };
+		88F894561B59B8BA00838BF8 /* MobilePayCrossOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F894551B59B8BA00838BF8 /* MobilePayCrossOver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,12 +65,11 @@
 		881F2A1B1B2A37AE007EDBF0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		881F2A1D1B2A37EB007EDBF0 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		881F2A1F1B2A37FC007EDBF0 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
-		886E28D71B1E6A720003DDDE /* PassbookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassbookCell.swift; sourceTree = "<group>"; };
-		886E28D81B1E6A720003DDDE /* PassbookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PassbookCell.xib; sourceTree = "<group>"; };
-		886E28D91B1E6A720003DDDE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		886E28DA1B1E6A720003DDDE /* PassbookLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassbookLayout.swift; sourceTree = "<group>"; };
 		886E28DF1B20CACC0003DDDE /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		886E29271B2133530003DDDE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../SmartPay/SmartPay/FacebookSDK.framework; sourceTree = "<group>"; };
+		88CE63701B36DA6800F86531 /* MobilePayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePayManager.h; sourceTree = "<group>"; };
+		88CE637D1B36FAAF00F86531 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		88CE637E1B36FAAF00F86531 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		88DFF7451B163EF700F502A9 /* SmartPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88DFF7491B163EF700F502A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88DFF74A1B163EF700F502A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,11 +100,13 @@
 		88E5FCD31B1BD363004CE73F /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		88E5FCE11B1BE701004CE73F /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = ../Order.swift; sourceTree = "<group>"; };
 		88E5FCE31B1BEEDA004CE73F /* basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basket.png; sourceTree = "<group>"; };
-		88E5FCE71B1CC1A7004CE73F /* DLHamburguerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLHamburguerContainerViewController.swift; path = Menu/DLHamburguerContainerViewController.swift; sourceTree = "<group>"; };
-		88E5FCE81B1CC1A7004CE73F /* DLHamburguerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLHamburguerNavigationController.swift; path = Menu/DLHamburguerNavigationController.swift; sourceTree = "<group>"; };
-		88E5FCE91B1CC1A7004CE73F /* DLHamburguerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLHamburguerViewController.swift; path = Menu/DLHamburguerViewController.swift; sourceTree = "<group>"; };
 		88E5FCEE1B1CC1E4004CE73F /* DLDemoMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DLDemoMenuViewController.swift; path = Menu/DLDemoMenuViewController.swift; sourceTree = "<group>"; };
-		88E5FCEF1B1CC1E4004CE73F /* AppMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppMenu.swift; path = Menu/AppMenu.swift; sourceTree = "<group>"; };
+		88F893D41B59936E00838BF8 /* libMobilePayManager1.6.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobilePayManager1.6.0.a; sourceTree = "<group>"; };
+		88F893D61B59939F00838BF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		88F893D81B5993A600838BF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		88F893DA1B5993B200838BF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		88F894541B59B8B000838BF8 /* MobilePayCrossOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePayCrossOver.h; sourceTree = "<group>"; };
+		88F894551B59B8BA00838BF8 /* MobilePayCrossOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePayCrossOver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +114,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F893DB1B5993B200838BF8 /* Foundation.framework in Frameworks */,
+				88F893D91B5993A600838BF8 /* UIKit.framework in Frameworks */,
+				88F893D71B59939F00838BF8 /* CoreGraphics.framework in Frameworks */,
+				88F893D51B59938600838BF8 /* libMobilePayManager1.6.0.a in Frameworks */,
 				88DFF78E1B16818600F502A9 /* libsqlite3.dylib in Frameworks */,
 				886E29281B2133530003DDDE /* FacebookSDK.framework in Frameworks */,
 			);
@@ -133,8 +136,13 @@
 		88DFF73C1B163EF700F502A9 = {
 			isa = PBXGroup;
 			children = (
+				88F893DA1B5993B200838BF8 /* Foundation.framework */,
+				88F893D81B5993A600838BF8 /* UIKit.framework */,
+				88F893D61B59939F00838BF8 /* CoreGraphics.framework */,
+				88F893D41B59936E00838BF8 /* libMobilePayManager1.6.0.a */,
 				886E29271B2133530003DDDE /* FacebookSDK.framework */,
 				88DFF78D1B16818600F502A9 /* libsqlite3.dylib */,
+				88CE63701B36DA6800F86531 /* MobilePayManager.h */,
 				88DFF7471B163EF700F502A9 /* SmartPay */,
 				88DFF7601B163EF700F502A9 /* SmartPayTests */,
 				88DFF7461B163EF700F502A9 /* Products */,
@@ -154,16 +162,14 @@
 		88DFF7471B163EF700F502A9 /* SmartPay */ = {
 			isa = PBXGroup;
 			children = (
+				88F894551B59B8BA00838BF8 /* MobilePayCrossOver.m */,
+				88F894541B59B8B000838BF8 /* MobilePayCrossOver.h */,
 				88E5FCE61B1CC19F004CE73F /* Menu */,
 				88DFF77C1B164A1F00F502A9 /* Data */,
 				88DFF7711B1648BA00F502A9 /* Controllers */,
 				88DFF76F1B1648AD00F502A9 /* Models */,
 				88DFF74A1B163EF700F502A9 /* AppDelegate.swift */,
 				881F2A121B251DAA007EDBF0 /* databaseFunctions.swift */,
-				886E28D71B1E6A720003DDDE /* PassbookCell.swift */,
-				886E28D81B1E6A720003DDDE /* PassbookCell.xib */,
-				886E28D91B1E6A720003DDDE /* ViewController.swift */,
-				886E28DA1B1E6A720003DDDE /* PassbookLayout.swift */,
 				88DFF7511B163EF700F502A9 /* Main.storyboard */,
 				88E5FCD31B1BD363004CE73F /* MenuItemCell.swift */,
 				88E5FCCF1B1BBEDC004CE73F /* Basket.swift */,
@@ -204,6 +210,8 @@
 		88DFF76F1B1648AD00F502A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				88CE637D1B36FAAF00F86531 /* Product.h */,
+				88CE637E1B36FAAF00F86531 /* Product.m */,
 				881F2A141B251ED6007EDBF0 /* SelectedItem.swift */,
 				88DFF7721B16492000F502A9 /* Cat.swift */,
 				88DFF7741B16493900F502A9 /* MenuItem.swift */,
@@ -246,11 +254,7 @@
 				881F2A1B1B2A37AE007EDBF0 /* SWRevealViewController.m */,
 				881F2A1D1B2A37EB007EDBF0 /* MenuController.swift */,
 				88E5FCEE1B1CC1E4004CE73F /* DLDemoMenuViewController.swift */,
-				88E5FCEF1B1CC1E4004CE73F /* AppMenu.swift */,
-				88E5FCE71B1CC1A7004CE73F /* DLHamburguerContainerViewController.swift */,
 				881F2A1F1B2A37FC007EDBF0 /* NewsTableViewController.swift */,
-				88E5FCE81B1CC1A7004CE73F /* DLHamburguerNavigationController.swift */,
-				88E5FCE91B1CC1A7004CE73F /* DLHamburguerViewController.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -340,7 +344,6 @@
 				88DFF7581B163EF700F502A9 /* LaunchScreen.xib in Resources */,
 				88DFF7551B163EF700F502A9 /* Images.xcassets in Resources */,
 				88E5FCE41B1BEEDA004CE73F /* basket.png in Resources */,
-				886E28DC1B1E6A720003DDDE /* PassbookCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,21 +361,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88E5FCEA1B1CC1A7004CE73F /* DLHamburguerContainerViewController.swift in Sources */,
 				88DFF7771B1649DE00F502A9 /* Recipt.swift in Sources */,
-				88E5FCEC1B1CC1A7004CE73F /* DLHamburguerViewController.swift in Sources */,
 				88DFF77E1B164AA200F502A9 /* DataManager.swift in Sources */,
 				88DFF7731B16492000F502A9 /* Cat.swift in Sources */,
 				88DFF74E1B163EF700F502A9 /* SmartPay.xcdatamodeld in Sources */,
-				886E28DD1B1E6A720003DDDE /* ViewController.swift in Sources */,
 				88E5FCD41B1BD363004CE73F /* MenuItemCell.swift in Sources */,
+				88CE637F1B36FAAF00F86531 /* Product.m in Sources */,
 				88E5FCD01B1BBEDC004CE73F /* Basket.swift in Sources */,
 				881F2A1E1B2A37EB007EDBF0 /* MenuController.swift in Sources */,
 				88DFF7801B164F1000F502A9 /* Menu.swift in Sources */,
-				886E28DE1B1E6A720003DDDE /* PassbookLayout.swift in Sources */,
 				88DFF7841B164FBC00F502A9 /* Payments.swift in Sources */,
 				88DFF7791B1649ED00F502A9 /* User.swift in Sources */,
-				88E5FCEB1B1CC1A7004CE73F /* DLHamburguerNavigationController.swift in Sources */,
 				88DFF7861B164FCF00F502A9 /* Recipts.swift in Sources */,
 				886E28E01B20CACC0003DDDE /* Profile.swift in Sources */,
 				88E283CF1B233A75004989A8 /* ReciptItem.swift in Sources */,
@@ -380,10 +379,9 @@
 				88DFF77B1B1649FB00F502A9 /* PaymentCard.swift in Sources */,
 				88E5FCE21B1BE701004CE73F /* Order.swift in Sources */,
 				88E5FCF11B1CC1E4004CE73F /* DLDemoMenuViewController.swift in Sources */,
-				886E28DB1B1E6A720003DDDE /* PassbookCell.swift in Sources */,
-				88E5FCF21B1CC1E4004CE73F /* AppMenu.swift in Sources */,
 				88DFF7AE1B1687EA00F502A9 /* String-Extras.swift in Sources */,
 				88DFF7751B16493900F502A9 /* MenuItem.swift in Sources */,
+				88F894561B59B8BA00838BF8 /* MobilePayCrossOver.m in Sources */,
 				881F2A131B251DAA007EDBF0 /* databaseFunctions.swift in Sources */,
 				88DFF76E1B16405C00F502A9 /* Home.swift in Sources */,
 				881F2A201B2A37FC007EDBF0 /* NewsTableViewController.swift in Sources */,
@@ -525,6 +523,10 @@
 				);
 				INFOPLIST_FILE = SmartPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartPay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -544,6 +546,10 @@
 				);
 				INFOPLIST_FILE = SmartPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartPay-Bridging-Header.h";
 			};
