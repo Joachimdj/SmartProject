@@ -36,6 +36,7 @@ let defaults = NSUserDefaults.standardUserDefaults()
      let screenSize: CGRect = UIScreen.mainScreen().bounds
 
    func loadCatData(){
+    
     let sqlDelete = "DROP TABLE MenuItems"
     db.execute(sqlDelete)
     let sqlDelete1 = "DROP TABLE  SelectedItems"

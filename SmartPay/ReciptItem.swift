@@ -47,7 +47,7 @@ class ReciptItem: UIViewController {
         
         total = UILabel()
         total!.frame = CGRectMake(screenWidth-105,0,105,30)
-        total!.font  = UIFont(name: total!.font.fontName, size: 12)
+        total!.font  = UIFont(name: total!.font.fontName, size: 10)
         total!.text = data2[0]["paymentDate"]?.asString()
         myscr!.addSubview(total!)
         total = UILabel()
@@ -55,18 +55,6 @@ class ReciptItem: UIViewController {
         total!.font  = UIFont(name: total!.font.fontName, size: 25)
         total!.text = StoreName
         myscr!.addSubview(total!)
-        
-        total = UILabel()
-        total!.frame = CGRectMake(screenWidth-105,0,105,30)
-        total!.font  = UIFont(name: total!.font.fontName, size: 12)
-        total!.text = data2[0]["paymentDate"]?.asString()
-        myscr!.addSubview(total!)
-        total = UILabel()
-        total!.frame = CGRectMake(10,25,screenWidth-10,30)
-        total!.font  = UIFont(name: total!.font.fontName, size: 12)
-        total!.text = "Ordre ID: 23"
-        myscr!.addSubview(total!)
-        
         
         addItems = UIButton()
         addItems!.frame = CGRectMake(screenWidth-120,40,110,45)

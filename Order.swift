@@ -239,15 +239,11 @@ class Order: UIViewController {
     func goToPayment(sender:UIButton!) {
        // myscr?.removeFromSuperview()
        // createPaymentWindow()
-        
-        var orderId = "123456789"
+         
         var name = "Kurv indhold"
         var image = UIImage(named:"basket.png")
-        var recieptMessage = "Thanks for your payment"
-        MobilePayManager.sharedInstance().beginMobilePaymentWithOrderId(orderId, productName: name, productPrice: 13123123, productImage: nil, receiptMessage: recieptMessage) { (NSError error) -> Void in
-         
-           
-        }
+        var recieptMessage = "Thanks for your payment" 
+        MobilePayCrossOver().Buying("\(formatter.stringFromNumber(basket)!)", orderId: "dl20xll1sls03l")
         
      
         // self.dismissViewControllerAnimated(true, completion: nil)
@@ -266,16 +262,8 @@ class Order: UIViewController {
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    @IBAction func Tom(sender: AnyObject) {
-       emtyBasket()
-        println("TOM")
    
-        
-        
-    }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+  
     
 }

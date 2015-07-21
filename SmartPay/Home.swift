@@ -7,26 +7,80 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class Home: UITableViewController {
-   
-    @IBOutlet weak var menu: UIBarButtonItem! 
+class Home: UITableViewController, CLLocationManagerDelegate {
+  var manager = CLLocationManager()
+    var lat = 0.0
+    var long = 0.0
+    @IBOutlet weak var menu: UIBarButtonItem!
+    
+    
+    func  calcDistance(latitude: Double, longitude: Double) -> Double{
+        
+        var unitLocation:CLLocation = CLLocation(latitude: lat, longitude:long)
+        
+        var storeLocation:CLLocation = CLLocation(latitude: latitude, longitude: longitude)
+        
+        
+        var calcDistance = unitLocation.distanceFromLocation(storeLocation)
+        return calcDistance;
+    }
+    func PartOfString(s: String, start: Int, length: Int) -> String
+    {
+        return s.substringFromIndex(advance(s.startIndex, start - 1)).substringToIndex(advance(s.startIndex, length))
+    }
+
+    
+     func updateMap() {
+        
+        if (CLLocationManager.locationServicesEnabled())
+        {
+            manager.delegate = self
+            manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            manager.startUpdatingLocation()
+        }
+    }
+    
     override func viewDidLoad() {
+       demoSpinner()
         super.viewDidLoad()
+        
+        self.manager.requestWhenInUseAuthorization()
+        //updateMap()
+        
+        var distanceString  = "\(calcDistance(55.676422, longitude:12.574691)/1000)"
+        var km = ""
+         km = "\(PartOfString(distanceString, start: 1, length: 3)) km"
+        println(km)
         var profileData = "||||"
         defaults.setObject(profileData, forKey: "profileDataContainer")
         formatter.numberStyle = .CurrencyStyle
         formatter.locale = NSLocale(localeIdentifier: "da_DK")
     
     }
-   
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!){
+        var locValue:CLLocationCoordinate2D = manager.location.coordinate
+        
+        println("locations = \(locValue.latitude) \(locValue.longitude)")
+        lat = locValue.latitude
+        long = locValue.longitude
+          
+        
+        //stop updating location for manual update
+        self.manager.stopUpdatingLocation()
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(animated: Bool) {
+        
         super.viewWillAppear(false)
+       
         
      
         var shadow = NSShadow()
@@ -59,7 +113,44 @@ class Home: UITableViewController {
             //self.revealViewController().rearViewRevealWidth = 62
         }
     }
-     
+    
+    func demoSpinner() {
+        
+        
+        
+      
+        if((calcDistance(55.676422, longitude:12.574691)/1000)>1){
+            delay(seconds: 0.0, completion: {
+                SwiftSpinner.show("Finder cafe", image: false)
+            })
+                delay(seconds: 3.5, completion: {
+             SwiftSpinner.show("Intet fundet, henter cafe kortet... ", animated: true, image: false)
+         })
+              delay(seconds: 5.5, completion: {
+                SwiftSpinner.hide()
+            })
+        }
+        else{
+            delay(seconds: 0.0, completion: {
+                SwiftSpinner.show("Finder cafe", image: false)
+            })
+        delay(seconds: 2.0, completion: {
+            SwiftSpinner.show("Cafe fundet... ", animated: true, image: false)
+        })
+        delay(seconds: 3.0, completion: {
+            SwiftSpinner.show("", animated: false, image: true)
+        })
+       }
+        
+    }
+    
+    func delay(#seconds: Double, completion:()->()) {
+        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
+        
+        dispatch_after(popTime, dispatch_get_main_queue()) {
+            completion()
+        }
+    }
     
     // MARK: - Table view data source
 
@@ -92,9 +183,7 @@ class Home: UITableViewController {
         
         // addSubView(indexPath.row,itemId: 1)
     }
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+    
  
     /*
     // Override to support conditional editing of the table view.

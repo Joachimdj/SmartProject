@@ -1,7 +1,5 @@
 #import <Foundation/Foundation.h>
 
 @interface MobilePayCrossOver: NSObject
-@property (strong, nonatomic) NSString *property; 
-- (void) Buying;
-
+- (void) Buying: (NSString *)priceString   orderId:(NSString *)orderId;
 @end

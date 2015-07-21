@@ -45,7 +45,9 @@
 		88F893D71B59939F00838BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F893D61B59939F00838BF8 /* CoreGraphics.framework */; };
 		88F893D91B5993A600838BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F893D81B5993A600838BF8 /* UIKit.framework */; };
 		88F893DB1B5993B200838BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F893DA1B5993B200838BF8 /* Foundation.framework */; };
-		88F894561B59B8BA00838BF8 /* MobilePayCrossOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F894551B59B8BA00838BF8 /* MobilePayCrossOver.m */; };
+		88F894D31B5C351600838BF8 /* MobilePayCrossOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F894D11B5C351600838BF8 /* MobilePayCrossOver.m */; };
+		88F894D71B5C464900838BF8 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F894D61B5C464900838BF8 /* SwiftSpinner.swift */; };
+		88F894DD1B5DB7F800838BF8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F894DC1B5DB7F800838BF8 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +69,6 @@
 		881F2A1F1B2A37FC007EDBF0 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		886E28DF1B20CACC0003DDDE /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		886E29271B2133530003DDDE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../SmartPay/SmartPay/FacebookSDK.framework; sourceTree = "<group>"; };
-		88CE63701B36DA6800F86531 /* MobilePayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePayManager.h; sourceTree = "<group>"; };
 		88CE637D1B36FAAF00F86531 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		88CE637E1B36FAAF00F86531 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		88DFF7451B163EF700F502A9 /* SmartPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,8 +106,11 @@
 		88F893D61B59939F00838BF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		88F893D81B5993A600838BF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		88F893DA1B5993B200838BF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		88F894541B59B8B000838BF8 /* MobilePayCrossOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilePayCrossOver.h; sourceTree = "<group>"; };
-		88F894551B59B8BA00838BF8 /* MobilePayCrossOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilePayCrossOver.m; sourceTree = "<group>"; };
+		88F894D01B5C351600838BF8 /* MobilePayCrossOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobilePayCrossOver.h; path = SmartPay/MobilePayCrossOver.h; sourceTree = "<group>"; };
+		88F894D11B5C351600838BF8 /* MobilePayCrossOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MobilePayCrossOver.m; path = SmartPay/MobilePayCrossOver.m; sourceTree = "<group>"; };
+		88F894D21B5C351600838BF8 /* MobilePayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobilePayManager.h; path = SmartPay/MobilePayManager.h; sourceTree = "<group>"; };
+		88F894D61B5C464900838BF8 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		88F894DC1B5DB7F800838BF8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F894DD1B5DB7F800838BF8 /* CoreLocation.framework in Frameworks */,
 				88F893DB1B5993B200838BF8 /* Foundation.framework in Frameworks */,
 				88F893D91B5993A600838BF8 /* UIKit.framework in Frameworks */,
 				88F893D71B59939F00838BF8 /* CoreGraphics.framework in Frameworks */,
@@ -136,13 +141,16 @@
 		88DFF73C1B163EF700F502A9 = {
 			isa = PBXGroup;
 			children = (
+				88F894DC1B5DB7F800838BF8 /* CoreLocation.framework */,
 				88F893DA1B5993B200838BF8 /* Foundation.framework */,
 				88F893D81B5993A600838BF8 /* UIKit.framework */,
 				88F893D61B59939F00838BF8 /* CoreGraphics.framework */,
 				88F893D41B59936E00838BF8 /* libMobilePayManager1.6.0.a */,
 				886E29271B2133530003DDDE /* FacebookSDK.framework */,
 				88DFF78D1B16818600F502A9 /* libsqlite3.dylib */,
-				88CE63701B36DA6800F86531 /* MobilePayManager.h */,
+				88F894D01B5C351600838BF8 /* MobilePayCrossOver.h */,
+				88F894D11B5C351600838BF8 /* MobilePayCrossOver.m */,
+				88F894D21B5C351600838BF8 /* MobilePayManager.h */,
 				88DFF7471B163EF700F502A9 /* SmartPay */,
 				88DFF7601B163EF700F502A9 /* SmartPayTests */,
 				88DFF7461B163EF700F502A9 /* Products */,
@@ -162,14 +170,13 @@
 		88DFF7471B163EF700F502A9 /* SmartPay */ = {
 			isa = PBXGroup;
 			children = (
-				88F894551B59B8BA00838BF8 /* MobilePayCrossOver.m */,
-				88F894541B59B8B000838BF8 /* MobilePayCrossOver.h */,
 				88E5FCE61B1CC19F004CE73F /* Menu */,
 				88DFF77C1B164A1F00F502A9 /* Data */,
 				88DFF7711B1648BA00F502A9 /* Controllers */,
 				88DFF76F1B1648AD00F502A9 /* Models */,
 				88DFF74A1B163EF700F502A9 /* AppDelegate.swift */,
 				881F2A121B251DAA007EDBF0 /* databaseFunctions.swift */,
+				88F894D61B5C464900838BF8 /* SwiftSpinner.swift */,
 				88DFF7511B163EF700F502A9 /* Main.storyboard */,
 				88E5FCD31B1BD363004CE73F /* MenuItemCell.swift */,
 				88E5FCCF1B1BBEDC004CE73F /* Basket.swift */,
@@ -308,6 +315,7 @@
 				TargetAttributes = {
 					88DFF7441B163EF700F502A9 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7PR3DG58P8;
 					};
 					88DFF75C1B163EF700F502A9 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -362,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88DFF7771B1649DE00F502A9 /* Recipt.swift in Sources */,
+				88F894D71B5C464900838BF8 /* SwiftSpinner.swift in Sources */,
 				88DFF77E1B164AA200F502A9 /* DataManager.swift in Sources */,
 				88DFF7731B16492000F502A9 /* Cat.swift in Sources */,
 				88DFF74E1B163EF700F502A9 /* SmartPay.xcdatamodeld in Sources */,
@@ -381,7 +390,7 @@
 				88E5FCF11B1CC1E4004CE73F /* DLDemoMenuViewController.swift in Sources */,
 				88DFF7AE1B1687EA00F502A9 /* String-Extras.swift in Sources */,
 				88DFF7751B16493900F502A9 /* MenuItem.swift in Sources */,
-				88F894561B59B8BA00838BF8 /* MobilePayCrossOver.m in Sources */,
+				88F894D31B5C351600838BF8 /* MobilePayCrossOver.m in Sources */,
 				881F2A131B251DAA007EDBF0 /* databaseFunctions.swift in Sources */,
 				88DFF76E1B16405C00F502A9 /* Home.swift in Sources */,
 				881F2A201B2A37FC007EDBF0 /* NewsTableViewController.swift in Sources */,
@@ -515,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SmartPay",
@@ -526,6 +536,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/libMobilePayManager1.6.0.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartPay-Bridging-Header.h";
@@ -538,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SmartPay",
@@ -549,6 +564,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/libMobilePayManager1.6.0.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartPay-Bridging-Header.h";

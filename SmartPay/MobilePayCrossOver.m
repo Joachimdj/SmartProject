@@ -14,32 +14,25 @@
 
 @implementation MobilePayCrossOver
 
-
-
-- (void) Buying {
-    NSLog(@"In buy method now");
-    
-    NSString *receiptMessage = @"Tak for dit køb, nyd din frugt!";
-    NSString *orderId = @"123456";
-    if ( (receiptMessage.length > 0) && (orderId.length > 0)) {
-         NSLog(@"In buy method now1");
-      [[MobilePayManager sharedInstance] beginMobilePaymentWithOrderId:orderId productPrice:20.0 receiptMessage:receiptMessage error:^(NSError *error) {
-          
-       
-               NSLog(@"In buy method now2");
-        }]; 
-        
-  
-        NSLog(@"In buy method now2");
-    }else{
-        NSLog(@"Error");
+- (void) Buying: (NSString *)priceString   orderId:(NSString *)orderId{
+   double price =[priceString doubleValue];
+    NSString *receiptMessage = @"Tak for dit køb, nyd din ordre!";
+    NSLog(orderId);
+    //No need to start the appswitch if one or more parameters are missing
+    if ((receiptMessage.length > 0) && (orderId.length > 0)) {
+        [[MobilePayManager sharedInstance] beginMobilePaymentWithOrderId:orderId productPrice:price receiptMessage:receiptMessage error:^(NSError *error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
+                                                            message:[NSString stringWithFormat:@"reason: %@, suggestion: %@",error.localizedFailureReason, error.localizedRecoverySuggestion]
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                                  otherButtonTitles:@"Install MobilePay",nil];
+            [alert show];
+        }];
     }
     
-
+    
 }
 
-
-
-
+ 
 
 @end

@@ -184,9 +184,6 @@ class Menu: UITableViewController {
         self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
         
     }
- 
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+  
 
 }

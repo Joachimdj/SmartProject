@@ -15,13 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let db = SQLiteDB.sharedInstance()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        Home().demoSpinner()
         loadCatData();
         loadMenuItemData();
         loadReciptsData();
         FBLoginView.self
         FBProfilePictureView.self
-        MobilePayManager.sharedInstance().setupWithMerchantId("APPDK0000000000", merchantUrlScheme: "fruitshop")
+        MobilePayManager.sharedInstance().setupWithMerchantId("APPDK0000000000", merchantUrlScheme: "SmartPay")
         
         return true
     }
@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
@@ -53,7 +54,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?) -> Bool {
+        println("Callback")
+        MobilePayManager.sharedInstance().handleMobilePayCallbacksWithUrl(url, success: { (OrderId, transactionId, signature) -> Void in
+            println("Success")
+            println("Mobilepay Success", message: "\(transactionId)")
+            }, error: { (orderId, errorCode, errorMessage) -> Void in
+                println("ERROR")
+                //     ViewHelper.showAlertWithTitle("Mobilepay Error", message: "")
+            }) { (orderId) -> Void in
+                println("Canceled")
+        }
+        return true;
+    }
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
@@ -116,19 +129,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?) -> Bool {
-     
-        MobilePayManager.sharedInstance().handleMobilePayCallbacksWithUrl(url, success: { (OrderId, transactionId, signature) -> Void in
-           println("Success")
-       //     ViewHelper.showAlertWithTitle("Mobilepay Success", message: "\(transactionId)")
-        }, error: { (orderId, errorCode, errorMessage) -> Void in
-             println("ERROR")
-         //     ViewHelper.showAlertWithTitle("Mobilepay Error", message: "")
-        }) { (orderId) -> Void in
-             println("Canceled")
-        }
-        return true
-    }
+ 
 }
 
