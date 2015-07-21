@@ -21,17 +21,17 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb1054094957934727</string>
-			</array>
-		</dict>
-		<dict>
 			<key>CFBundleURLName</key>
 			<string>JoachimDittman.SmartPay</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>SmartPay</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1054094957934727</string>
 			</array>
 		</dict>
 	</array>
