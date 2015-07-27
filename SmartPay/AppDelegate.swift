@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?) -> Bool {
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
         println("Callback")
         MobilePayManager.sharedInstance().handleMobilePayCallbacksWithUrl(url, success: { (OrderId, transactionId, signature) -> Void in
             println("Success")
